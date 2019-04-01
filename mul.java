@@ -13,7 +13,6 @@ class mul
      
         int[] d = new int[num1.length()+num2.length()];
      
-        //multiply each digit and sum at the corresponding positions
         for(int i=0; i<n1.length(); i++)
         {
             for(int j=0; j<n2.length(); j++)
@@ -24,7 +23,6 @@ class mul
      
         StringBuilder sb = new StringBuilder();
      
-        //calculate each digit
         for(int i=0; i<d.length; i++)
         {
             int mod = d[i]%10;
@@ -36,12 +34,11 @@ class mul
             sb.insert(0, mod);
         }
      
-        //remove front 0's
         while(sb.charAt(0) == '0' && sb.length()> 1)
         {
             sb.deleteCharAt(0);
         }
      
-        return sb.toString();
+        System.out.println(sb);
     }
 }
